@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Quick sign app which can be used for any signature related purposes."
+    />
+    <meta name="keywords" content="HTML, CSS" />
+    <meta name="author" content="Akshat Singh Rajput" />
+    <title>Signature App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="assets/Favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+  <body class="absolute translate-x-1/2">
+    <div class="head flex flex-row justify-around my-5 m-3">
+      <div class="option">
+        <label for="colorPicker" class="mx-14">Text Color Picker</label>
+        <input
+          type="color"
+          name="form-control"
+          id="colorPicker"
+          class="flex w-60"
+        />
+      </div>
+      <div class="option">
+        <label for="canvasPicker" class="mx-16">Background</label>
+        <input
+          type="color"
+          name="form-control"
+          id="canvasPicker"
+          class="flex w-60"
+        />
+      </div>
+      <div class="option">
+        <label for="fontSize" class="mx-16">Font Size</label>
+        <select name="form-control" id="fontSize" class="flex w-60 border-2">
+          <option value="5">5px</option>
+          <option value="10">10px</option>
+          <option value="15">15px</option>
+          <option value="20">20px</option>
+          <option value="25">25px</option>
+          <option value="30">30px</option>
+          <option value="35">35px</option>
+          <option value="40">40px</option>
+          <option value="45">45px</option>
+          <option value="50">50px</option>
+        </select>
+      </div>
+    </div>
+
+    <canvas
+      class="canvas border-2 border-black"
+      id="myCanvas"
+      width="800"
+      height="500"
+    ></canvas>
+
+    <div class="foot flex flex-row justify-around my-5 m-3">
+      <button
+        type="button"
+        class="btn btn-danger w-60 border-2"
+        id="clearButton"
+      >
+        Clear
+      </button>
+      <button
+        type="button"
+        class="btn btn-success w-60 border-2"
+        id="saveButton"
+      >
+        Save & Download
+      </button>
+      <button
+        type="button"
+        class="btn btn-warning w-60 border-2"
+        id="retrieveButton"
+      >
+        Retrieve Saved Signature
+      </button>
+    </div>
+    <script src="signature.js"></script>
+  </body>
+</html>
